@@ -1,2 +1,9 @@
 <h1>Song Playlist</h1>
+<ul>
+    <li ng-repeat="song in vm.playlist track by $index">
+        {{song.title}} - {{song.artist}}
+        <button ng-click="vm.openEditModal($index)">Edit</button>
+        <button ng-click="vm.deleteSong(song._id)">Delete</button>
+    </li>
+</ul>
 <button ng-click="vm.openCreateModal()">Add Song</button>
