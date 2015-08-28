@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-	<title>My App</title>
+	<title>Online Playlist</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/superhero/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.css">
 	<link rel="stylesheet" type="text/css" href="/css/site.css">
 </head>
 <body>
-	<h1>The App Works!</h1>
 	<ui-view></ui-view>
 	<script src="/angular/angular.js"></script>
 	<script src="/angular-ui-router/release/angular-ui-router.js"></script>
 	<script src="/angular-bootstrap/ui-bootstrap.js"></script>
 	<script src="/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script src="/javascript/app.js"></script>
+	<script src="/javascript/filters/searchFilter.js"></script>
 	<script src="/javascript/factories/songFactory.js"></script>
 	<script src="/javascript/controllers/songController.js"></script>
-	<script src="/javascript/controllers/createModalController.js"></script>	<script src="/javascript/controllers/editModalController.js"></script>
+	<script src="/javascript/controllers/createModalController.js"></script>
+	<script src="/javascript/controllers/editModalController.js"></script>
 </body>
 </html>
