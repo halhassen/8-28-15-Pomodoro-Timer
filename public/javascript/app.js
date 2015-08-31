@@ -1,13 +1,18 @@
 angular.module("app", ["ui.router", "ui.bootstrap"])
 .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/");
-	$stateProvider.state("Home", {
+	$stateProvider.state("Timer", {
 		url:"/",
-		templateUrl: "javascript/templates/songs.html",
-		controller: "SongController",
+		templateUrl: "javascript/templates/timer.html",
+		controller: "TimerController",
 		controllerAs: "vm"
 	})
-}]);/*
+
+	
+}]);
+
+
+/*
 (function() {
 	"use strict";
 	angular.module("app", ["ui.router", "ui.bootstrap"]).config(config);

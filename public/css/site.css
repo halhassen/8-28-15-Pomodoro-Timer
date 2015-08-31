@@ -1,3 +1,21 @@
 button {
 	color: black;
 }
+
+body {
+	margin: auto;
+	text-align: center;
+	background-color: #777eee;
+}
+
+.timeBox {
+	border: solid 1px #fff;
+	border-radius: 6px;
+	padding: 13px;
+	font-size: 6em;
+	width: 100px;
+}
+
+.clock {
+	margin-bottom: 19px;
+}

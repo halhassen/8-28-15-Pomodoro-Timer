@@ -1,0 +1,40 @@
+<form name="timers">
+	<h1 style="font-family: Arial;" class="page-header text-center">Pomodoro Timer</h1>
+
+	<div class="col-sm-6 well">
+
+		<div class="clock">
+			<span class="timeBox">{{vm.workHours}}</span>
+			<span class="timeBox">{{vm.workMinutes}}</span>
+			<span class="timeBox">{{vm.workSeconds}}</span>
+		</div>
+		<h3>Work Time</h3>
+		<input type="number" min="0" placeholder="Hours" required ng-model="vm.workHoursInput"/>
+		<input type="number" min="0" placeholder="Minutes" required ng-model="vm.workMinutesInput"/>
+		<input type="number" min="0" placeholder="Seconds" required ng-model="vm.workSecondsInput"/><br>
+		<button class="btn btn-primary" ng-click="vm.startWork()"><span class="glyphicon glyphicon-play"></span></button>
+	</div>
+
+	<div class="col-sm-6 well">
+
+		<div class="clock">
+			<span class="timeBox">{{vm.breakHours}}</span>
+			<span class="timeBox">{{vm.breakMinutes}}</span>
+			<span class="timeBox">{{vm.breakSeconds}}</span>
+		</div>
+		<h3>Break Time</h3>
+		<input type="number" ng-minlength="0" ng-maxlength="99" placeholder="Hours" required ng-model="vm.breakHoursInput"/>
+		<input type="number" ng-minlength="0" ng-maxlength="59" placeholder="Minutes" required ng-model="vm.breakMinutesInput"/>
+		<input type="number" ng-minlength="0" ng-maxlength="59" placeholder="Seconds" required ng-model="vm.breakSecondsInput"/><br>
+		<button class="btn btn-info" ng-disabled="" ng-click="vm.startBreak()"><span class="glyphicon glyphicon-play"></span></button>
+		<div role="alert">
+			<span class="error" ng-show="timers.vm.breakHoursInput.$error.minlength"></span>
+			<span class="error" ng-show="timers.vm.breakHoursInput$error.maxlength"></span>
+			<span class="error" ng-show="timers.vm.breakMinutesInput.$error.minlength"></span>
+			<span class="error" ng-show="timers.vm.breakMinutesInput$error.maxlength"></span>
+			<span class="error" ng-show="timers.vm.breakSecondsInput.$error.minlength"></span>
+			<span class="error" ng-show="timers.vm.breakSecondsInput$error.maxlength"></span>
+		</div>
+	</div>
+</form>
+
